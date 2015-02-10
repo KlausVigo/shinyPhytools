@@ -22,33 +22,18 @@ shinyUI(fluidPage(
       fileInput('fileCSV', 'Choose CSV File',
           accept=c('text/csv', 
              'text/comma-separated-values,text/plain', '.csv')),
-<<<<<<< HEAD
       actionButton("refreshButton", icon("refresh")),
       
-      uiOutput('chooseVariable'),
-=======
->>>>>>> 72560356c61c4d4cb458378a4c3afe525eae2134
-#      sliderInput("bins",
-#                  "Number of bins:",
-#                  min = 1,
-#                  max = 50,
-#                  value = 30),
-<<<<<<< HEAD
+      uiOutput('chooseVar'),
+
 #Tree type
-=======
-      #Tree type
->>>>>>> 72560356c61c4d4cb458378a4c3afe525eae2134
       HTML("<div id=\"ptype\" class=\"btn-group\">
            <button id=\"phylogram\"  type=\"button\" class=\"btn action-button\">\n  <img src=\"../phylogram.png\" width=\"40\" height=\"40\" alt=\"phylogram\"/>\n</button>\n
            <button id=\"fan\" type=\"button\" class=\"btn action-button\">\n  <img src=\"../fan.png\" width=\"40\" height=\"40\" alt=\"fan\"/>\n</button>
            </div>"),
-<<<<<<< HEAD
 #Direction for phylogramm 
       uiOutput('direction'),
 #Fonts for Labels
-=======
-      #Labels
->>>>>>> 72560356c61c4d4cb458378a4c3afe525eae2134
       HTML("<div id=\"font\" class=\"btn-group\">
 <button id=\"font1\"  type=\"button\" class=\"btn action-button\">\n  <img src=\"../font1.svg\" width=\"40\" height=\"40\" alt=\"font1\"/>\n</button>\n
 <button id=\"font2\" type=\"button\" class=\"btn action-button\">\n  <img src=\"../font2.svg\" width=\"40\" height=\"40\" alt=\"font2\"/>\n</button>
