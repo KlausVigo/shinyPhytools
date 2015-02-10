@@ -28,6 +28,7 @@ shinyServer(function(input, output) {
     readTrees(input$fileTree$datapath, xx$format)
   })
 
+
   dataInput <- reactive({
     inFile <- input$fileCSV
     if (is.null(inFile))
@@ -86,6 +87,45 @@ shinyServer(function(input, output) {
     tree <- treeInput()
     
     plot(tree, type=xx$type, direction=input$direction)
+=======
+
+  dataInput <- reactive({
+    inFile <- input$fileCSV
+    if (is.null(inFile))
+      return(NULL)
+    read.csv(inFile$datapath, row.names=1)
+  })
+  
+  
+#  X <- reactiveValues()
+#  X$tree <- treeInput()
+  
+    xx <- reactiveValues()
+    xx$format <- "phylip"
+    xx$type <- "phylogram"
+    xx$font <- 1
+    xx$phyloOrClado <- TRUE
+    observe({
+        if (input$phylogram != 0) {
+            xx$type <- "phylogram"
+            xx$phyloOrClado <- TRUE
+        }
+    })
+    observe({
+       if (input$fan != 0) {
+           xx$type <- "fan"
+           xx$phyloOrClado <- FALSE
+           }
+    })
+
+
+
+
+  output$distPlot <- renderPlot({
+#browser()
+    tree <- treeInput()        
+    plot(tree, type=xx$type)
+>>>>>>> 72560356c61c4d4cb458378a4c3afe525eae2134
     
     
   })
