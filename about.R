@@ -2,14 +2,19 @@ function(){
     tabPanel("About",
 HTML("
     <p>shinyPhytools is a small interactive treeviewer to plot phylogenetic trees using the R
-    packages phangorn.</p>
+    packages phytools.</p>
+    <p></p>
+
         <p>It is possible to run it from within R:</p>
         <p><code>shiny::runGitHub('shinyPhytools', 'KlausVigo')</code></p>
         <p>can launched also via the <a
     href='http://klash.shinyapps.io/shinyPhytools/'>RStudio server</a>.</p>
         <p>The source code shinyPhytools is on <a
     href='https://github.com/KlausVigo/shinyPhytools'>GitHub</a>. shinyPhytools
-    is in early development so I am happy to recieve suggestions or bug reports. </p>
+    is in early development so we are more than happy to recieve suggestions or bug reports. </p>
+
+<p>Klaus & Liam</p>
+
         <p> </p>
         <p><strong>References</strong> </p>
         <p><a href='http://www.rstudio.com/shiny'>shiny</a></p>
